@@ -4,9 +4,7 @@
   --cor-primaria: #000000;
   --fonte-primaria: "Krona One", serif;
   --fonte-secundaria: "Montserrat", serif;
-  --color-7: #E5E1DA; /* Nova cor para o efeito de transição */
-
-  /* Palette Colors */
+  --color-7: #E5E1DA;
   --color-1: #000000;
   --color-2: #95b8d1;
   --color-3: #49243e;
@@ -15,7 +13,6 @@
   --color-6: #eac4d5;
 }
 
-/* Estilos gerais */
 * {
   margin: 0;
   padding: 0;
@@ -24,16 +21,16 @@
 
 body {
   background-color: var(--color-1);
-    color: var(--color-6);
-    font-family: var(--fonte-secundaria);
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
+  color: var(--color-6);
+  font-family: var(--fonte-secundaria);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Seção de Cabeçalho */
 .cabecalho {
   padding: 2% 0% 0% 15%;
+
 }
 
 .cabecalho__menu {
@@ -54,7 +51,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Seção de Apresentação */
 .apresentacao {
   padding: 5% 15%;
   display: flex;
@@ -117,28 +113,26 @@ body {
   transform: scale(1.1);
 }
 
-/* Estilo para a imagem com efeito 3D */
 .notebook-icon {
-    perspective: 1000px; /* Adiciona perspectiva para o efeito 3D */
-    width: 50%; /* Ajusta a largura para responsividade */
-    display: flex; /* Centraliza a imagem */
-    justify-content: center; /* Centraliza horizontalmente */
+    perspective: 1000px; 
+    width: 50%; 
+    display: flex; 
+    justify-content: center; 
 }
 
 .notebook-icon img {
-    width: auto; /* Largura automática para manter proporção */
-    max-width: 400px; /* Largura máxima */
+    width: auto; 
+    max-width: 400px; 
     height: auto;
-    transition: transform 0.5s ease; /* Transição suave */
-     /* Remove a posição relativa, top e left */
+    transition: transform 0.5s ease; 
+     
 }
 
 .notebook-icon:hover img {
-  /* Remove o rotateX e rotateY e adiciona o rotateY para 360deg */
+
     transform: rotateY(360deg);
 }
 
-/* Seção de projetos */
 .projeto__links__navegacao {
   display: flex;
   justify-content: center;
@@ -198,7 +192,7 @@ body {
   border: 2px solid var(--color-4);
   border-radius: 15px;
   background-color: var(--color-1);
-  transition: transform 0.1s ease-in-out; /* Mesmo timing do cabeçalho */
+  transition: transform 0.1s ease-in-out; 
   transform-style: preserve-3d;
   position: relative;
   z-index: 1;
@@ -207,7 +201,7 @@ body {
 }
 
 .projetos__item:hover {
-  transform: scale(1.05); /* Mesmo scale do cabeçalho */
+  transform: scale(1.05); 
   transform: scale(1.05) rotateX(5deg) rotateY(5deg);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom, var(--color-1), var(--color-2));
@@ -225,7 +219,7 @@ body {
   transition: transform 0.5s ease;
   transform: scaleX(0);
   transform-origin: left;
-  border-radius: 13px; /* Ligeiramente menor que o container para evitar bordas irregulares */
+  border-radius: 13px; 
 }
 
 .projetos__item:hover::before {
@@ -235,7 +229,6 @@ body {
 .projetos__item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  /* background: var(--color-7); */
 
 }
 
@@ -272,16 +265,16 @@ body {
 .rodape {
   padding: 24px;
   text-align: center;
-  background-color: var(--color-3); /* Alterado para usar uma cor da paleta */
+  background-color: var(--color-3); 
   width: 100%;
-  margin-top: auto; /* Adiciona margem automática no topo */
+  margin-top: auto; 
   color: var(--color-6);
 }
 
-/* Estilos para a seção de artigos (Links Úteis) - CLONADOS E AJUSTADOS */
+
 .artigos {
-  padding: 20px; /* Igual a .projetos */
-  background-color: var(--color-2); /* Igual a .projetos */
+  padding: 20px; 
+  background-color: var(--color-2); 
 }
 
 .artigos__titulo {
@@ -291,13 +284,13 @@ body {
 }
 
 .artigos__lista {
-  list-style: none; /* Remove os marcadores de lista */
-  padding: 20px; /* Igual a .projetos__lista */
-  display: grid; /* Igual a .projetos__lista */
+  list-style: none;
+  padding: 20px; 
+  display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Igual a .projetos__lista, mas com um minmax um pouco menor para melhor ajuste */
-  gap: 20px; /* Igual a .projetos__lista */
-  max-width: 1200px; /* Igual a .projetos__lista */
-  margin: 0 auto; /* Igual a .projetos__lista */
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .artigos__item {
@@ -313,7 +306,7 @@ body {
   overflow: hidden;
   word-wrap: break-word;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out; /* Aumentado o tempo da transição */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .artigos__item::before {
@@ -336,24 +329,22 @@ body {
   transform: scaleX(1);
 }
 
-
 .artigos__item:hover {
-  transform: scale(1.1); /* Mesmo scale do cabeçalho */
+  transform: scale(1.1); 
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background: var(--color-2); /* Alterado para a nova cor */
-
+  background: var(--color-2); 
 }
 
 .artigos__item h3 {
-  font-size: 18px; /* Igual a .projetos__item */
-  margin-bottom: 5px; /* Igual a .projetos__item */
-  color: var(--color-6); /* Igual a .projetos__item */
+  font-size: 18px; 
+  margin-bottom: 5px; 
+  color: var(--color-6); 
 }
 
 .artigos__item p {
-  font-size: 14px; /* Igual a .projetos__item */
-  color: var(--color-6); /* Igual a .projetos__item */
+  font-size: 14px; 
+  color: var(--color-6); 
 }
 
 .artigos__img {
@@ -362,14 +353,12 @@ body {
     margin-bottom: 15px;
 }
 
-/* Adicionando o hover no link dentro de artigos__item */
 .artigos__item a:hover {
-  transform: scale(1.1); /* Ajustado para match com o efeito da home */
+  transform: scale(1.1); 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-decoration: none; 
 }
 
-/* Estilos específicos para a página Sobre Mim */
 .about-page {
   background: linear-gradient(135deg, var(--color-1) 0%, var(--color-3) 100%);
   min-height: 100vh;
@@ -379,9 +368,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
-
-
-/* Hero Section */
 
 .about-hero {
   display: flex;
@@ -427,14 +413,12 @@ body {
   opacity: 0.5;
 }
 
-
-
 .about-hero__subtitle {
   font-size: 1.5rem;
   color: var(--color-6);
   margin-bottom: 30px;
-  opacity: 0; /* Inicialmente invisível */
-  animation: subtitleSlide 1s ease-in 0.5s forwards; /* Aplica a animação subtitleSlide */
+  opacity: 0;
+  animation: subtitleSlide 1s ease-in 0.5s forwards; 
 }
 .about-hero__image {
   flex: 1;
@@ -448,13 +432,12 @@ body {
   max-width: 400px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  opacity: 0; /* Inicialmente invisível */
-  animation: imageFade 1s ease-in 0.8s forwards, imageFloat 3s ease-in-out infinite; /* Aplica a animação imageFloat */
+  opacity: 0;
+  animation: imageFade 1s ease-in 0.8s forwards, imageFloat 3s ease-in-out infinite;
 
 }
 
 
-/* Grid de Cards */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -488,10 +471,8 @@ body {
   color: var(--color-5);
 }
 
-/* Timeline */
 .about-journey {
   margin: 80px 0;
-  /* padding: 0 20px; */
 }
 
 .about-journey h2 {
@@ -506,9 +487,6 @@ body {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: column;
-  gap: 30px; */
 }
 
 .timeline::before {
@@ -557,7 +535,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Posicionamento alternado dos itens */
 .timeline-item:nth-child(odd) .timeline-content {
   margin-right: 50%;
   text-align: right;
@@ -567,7 +544,6 @@ body {
   margin-left: 50%;
   text-align: left;
 
-/* Animações */
 @keyframes titleFade {
   from { opacity: 0; transform: translateY(-30px); background-position: 0% 50%;}
   to { 
@@ -600,7 +576,6 @@ body {
   }
 }
 
-/* Responsividade para a seção hero */
 @media (max-width: 768px) {
   .about-hero {
       flex-direction: column;
@@ -630,9 +605,6 @@ body {
   }
 }
 
-
-
-/* Estilização do conteúdo */
 timeline-content h3 {
   font-size: 1.8rem;
   color: var(--color-4);
@@ -647,12 +619,10 @@ timeline-content h3 {
   line-height: 1.5;
 }
 
-/* Efeitos hover */
 .timeline-item:hover .timeline-dot {
   background: var(--color-5);
   transform: translateX(-50%) scale(1.5);
   box-shadow: 0 0 20px var(--color-4);
-
 
 }
 
@@ -668,44 +638,39 @@ timeline-content h3 {
   text-shadow: 0 0 10px rgba(248, 5, 114, 0.3);
 }
 
-/* RESPONSIVIDADE - MEDIA QUERIES */
 
-/* Tablets (largura máxima de 768px) */
 @media (max-width: 768px) {
   .projetos__item:hover,
   .artigos__item:hover {
-    transform: scale(1.2); /* Aumentado de 1.05 para 1.2 */
+    transform: scale(1.2); 
   }
 }
 
   .projetos__item:hover,
     .artigos__item:hover {
-        transform: scale(1.05); /* Reduz um pouco o scale em telas menores */
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+        transform: scale(1.05); 
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);/
 
   .cabecalho__menu {
-    gap: 20px; /* Reduz o espaçamento entre os links */
-    justify-content: center; /* Centraliza os links */
+    gap: 20px; 
+    justify-content: center; 
   }
 
   .apresentacao {
-    flex-direction: column-reverse; /* Inverte a ordem dos elementos */
-    padding: 5%; /* Ajusta o padding */
+    flex-direction: column-reverse; 
+    padding: 5%; 
     gap: 40px;
   }
 
   .apresentacao__conteudo {
-    width: auto; /* O conteúdo ocupa toda a largura */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
-  /* .apresentacao__imagem {
-    width: 80%;
-    max-width: none;
-    top: 0;
-    left: 0;
-  } */
     .notebook-icon {
-        width: 100%; /* Ocupa toda a largura em telas menores */
+        width: 100%; 
     }
 
     .projetos__lista,
@@ -741,36 +706,53 @@ timeline-content h3 {
 
 }
 
-/* Celulares (largura máxima de 480px) */
 @media (max-width: 480px) {
   .cabecalho__menu__link {
-    font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    font-size: 1.2rem; 
   }
 
   .apresentacao__conteudo__titulo {
-    font-size: 1.8rem; /* Reduz o tamanho da fonte */
+    font-size: 1.8rem; 
+    font-family: var(--fonte-primaria);
   }
 
   .apresentacao__conteudo__texto {
-    font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    font-size: 1.2rem; 
   }
 
   .apresentacao__links__subtitulo {
-    font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem; 
   }
 
   .apresentacao__links__navegacao {
-    font-size: 0.8rem; /* Reduz o tamanho da fonte */
-    padding: 1rem 0; /* Ajusta o padding */
-    width: 80%; /* Aumenta a largura */
+    display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid var(--color-6);
+  width: 50%;
+  border-radius: 8px;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-6);
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, 
+      #1a1f3c 0%,
+      #2a2f4c 50%,
+      #3a3f5c 100%
+  );
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
   .projetos__lista,
   .artigos__lista {
-    grid-template-columns: 1fr; /* Uma coluna em celulares */
+    grid-template-columns: 1fr; 
   }
     .notebook-icon {
-        width: 100%; /* Ocupa toda a largura em telas menores */
+        width: 100%;
     }
 
 .about-journey h2 {
@@ -795,15 +777,13 @@ timeline-content h3 {
 
 }
 
-/*Para telas muito pequenas*/
 @media (max-width: 375px) {
     .projetos__lista,
     .artigos__lista {
-        grid-template-columns: 1fr; /* Uma coluna em celulares */
+        grid-template-columns: 1fr; 
     }
 }
 
-/* Estilos específicos para a página Sobre Mim */
 .about-page {
   background: linear-gradient(135deg, var(--color-1) 0%, var(--color-3) 100%);
   min-height: 100vh;
@@ -815,7 +795,6 @@ timeline-content h3 {
   margin: 0 auto;
 }
 
-/* Hero Section */
 .about-hero {
   display: flex;
   align-items: center;
@@ -882,7 +861,6 @@ timeline-content h3 {
   z-index: 2;
 }
 
-/* Animações */
 @keyframes titleFade {
   from {
       opacity: 0;
@@ -929,7 +907,6 @@ timeline-content h3 {
 }
 
 @media (max-width: 768px) {
-  /* Ajustes do cabeçalho */
   .cabecalho {
       padding: 2% 5%;
   }
@@ -940,7 +917,6 @@ timeline-content h3 {
       flex-wrap: wrap;
   }
 
-  /* Ajustes da seção Sobre Mim */
   .about-container {
       padding: 2% 5%;
   }
@@ -964,7 +940,6 @@ timeline-content h3 {
       max-width: 300px;
   }
 
-  /* Ajustes dos cards */
   .about-grid {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -976,7 +951,6 @@ timeline-content h3 {
       padding: 20px;
   }
 
-  /* Ajustes da timeline */
   .about-journey {
       margin: 40px 0;
       padding: 0 15px;
@@ -1013,7 +987,6 @@ timeline-content h3 {
 }
 
 @media (max-width: 480px) {
-  /* Ajustes mais específicos para telas menores */
   .cabecalho__menu__link {
       font-size: 1rem;
   }
@@ -1050,7 +1023,6 @@ timeline-content h3 {
       font-size: 0.9rem;
   }
 
-  /* Ajuste do rodapé */
   .rodape {
       padding: 15px;
       font-size: 0.9rem;
@@ -1058,7 +1030,6 @@ timeline-content h3 {
 }
 
 @media (max-width: 320px) {
-  /* Ajustes para telas muito pequenas */
   .about-hero__title {
       font-size: 1.8rem;
   }
@@ -1076,9 +1047,7 @@ timeline-content h3 {
   }
 }
 
-/* Media Queries Globais */
 @media (max-width: 768px) {
-  /* Ajustes do cabeçalho para todas as páginas */
   .cabecalho {
       padding: 2% 5%;
   }
@@ -1089,7 +1058,6 @@ timeline-content h3 {
       flex-wrap: wrap;
   }
 
-  /* Ajustes gerais de container */
   .apresentacao,
   .about-container,
   .projetos,
@@ -1097,7 +1065,6 @@ timeline-content h3 {
       padding: 2% 5%;
   }
 
-  /* Ajustes de layout */
   .apresentacao,
   .about-hero {
       flex-direction: column;
@@ -1106,7 +1073,6 @@ timeline-content h3 {
       margin: 30px 0;
   }
 
-  /* Ajustes de imagens */
   .notebook-icon,
   .about-hero__image img,
   .project__item__img,
@@ -1115,7 +1081,6 @@ timeline-content h3 {
       margin: 0 auto;
   }
 
-  /* Ajustes de grid */
   .about-grid,
   .projetos__lista,
   .artigos__lista {
@@ -1125,7 +1090,6 @@ timeline-content h3 {
       padding: 0 15px;
   }
 
-  /* Ajustes de cards */
   .about-card,
   .projetos__item,
   .artigos__item {
@@ -1134,7 +1098,6 @@ timeline-content h3 {
 }
 
 @media (max-width: 480px) {
-  /* Ajustes de fonte */
   .cabecalho__menu__link {
       font-size: 1rem;
   }
@@ -1151,7 +1114,6 @@ timeline-content h3 {
       font-size: 1rem;
   }
 
-  /* Ajustes de imagens */
   .notebook-icon,
   .about-hero__image img,
   .project__item__img,
@@ -1159,7 +1121,6 @@ timeline-content h3 {
       max-width: 250px;
   }
 
-  /* Ajustes de links */
   .apresentacao__links__navegacao,
   .projeto__links__navegacao {
       width: 100%;
@@ -1167,14 +1128,12 @@ timeline-content h3 {
       font-size: 0.9rem;
   }
 
-  /* Ajustes de cards */
   .about-card,
   .projetos__item,
   .artigos__item {
       padding: 15px;
   }
 
-  /* Ajustes de ícones e títulos */
   .about-card__icon {
       font-size: 2rem;
   }
@@ -1185,7 +1144,6 @@ timeline-content h3 {
       font-size: 1.2rem;
   }
 
-  /* Ajuste do rodapé */
   .rodape {
       padding: 15px;
       font-size: 0.9rem;
@@ -1193,7 +1151,6 @@ timeline-content h3 {
 }
 
 @media (max-width: 320px) {
-  /* Ajustes para telas muito pequenas */
   .apresentacao__conteudo__titulo,
   .about-hero__title,
   .projetos__titulo,
@@ -1206,7 +1163,6 @@ timeline-content h3 {
       font-size: 0.9rem;
   }
 
-  /* Ajustes de imagens */
   .notebook-icon,
   .about-hero__image img,
   .project__item__img,
@@ -1214,7 +1170,6 @@ timeline-content h3 {
       max-width: 200px;
   }
 
-  /* Ajustes de cards */
   .about-card,
   .projetos__item,
   .artigos__item {
@@ -1222,7 +1177,6 @@ timeline-content h3 {
   }
 }
 
-/* Adicione estas regras ao seu CSS existente */
 .projetos__item a {
   text-decoration: none;
   color: inherit;
@@ -1235,12 +1189,10 @@ timeline-content h3 {
   color: var(--color-6);
 }
 
-/* Ocultar projetos extras */
 .projetos__item__oculto {
-  display: none;  /* Esconde completamente o elemento */
+  display: none; 
 }
 
-/* Mantenha as outras propriedades que já existem */
 .projetos__item a {
   text-decoration: none;
   color: inherit;
@@ -1253,21 +1205,19 @@ timeline-content h3 {
   color: var(--color-6);
 }
 
-/* Tela HOME */
 
 body:not(.about-page) .apresentacao {
   background: linear-gradient(135deg, 
-      #000000 0%,    /* Preto puro */
-      #0a0a0a 25%,   /* Quase preto */
-      #121212 50%,   /* Dark suave */
-      #1a1a1a 75%,   /* Dark médio */
-      #3C3D37 100%   /* Dark mais claro */
+      #000000 0%,    
+      #0a0a0a 25%,   
+      #121212 50%,  
+      #1a1a1a 75%,   
+      #3C3D37 100%   
   );
   position: relative;
   z-index: 1;
 }
 
-/* Efeito no cabeçalho */
 .cabecalho {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -1284,7 +1234,6 @@ body:not(.about-page) .apresentacao {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Efeito nos links do menu */
 .cabecalho__menu__link {
   position: relative;
   overflow: hidden;
@@ -1312,28 +1261,25 @@ body:not(.about-page) .apresentacao {
   transform: translateY(-2px);
 }
 
-/* Fundo para a página de Projetos - tons de roxo escuro */
 .project-page {
   background: linear-gradient(145deg,
-      #0a0612 0%,    /* Roxo muito escuro */
-      #130b24 35%,   /* Roxo escuro */
-      #1d1132 70%,   /* Roxo médio escuro */
-      #261640 100%   /* Roxo profundo */
+      #0a0612 0%,   
+      #130b24 35%, 
+      #1d1132 70%,   
+      #261640 100%   
   );
 }
 
-/* Fundo para a página de Links Úteis - tons de azul escuro */
 body:has(.artigos__lista) {
   background: linear-gradient(160deg,
-      #0a0d14 0%,    /* Azul muito escuro */
-      #111827 30%,   /* Azul escuro */
-      #1a2333 60%,   /* Azul médio escuro */
-      #1e293b 90%,   /* Azul profundo */
-      #252f43 100%   /* Azul noturno */
+      #0a0d14 0%,   
+      #111827 30%,  
+      #1a2333 60%,  
+      #1e293b 90%,   
+      #252f43 100%   
   );
 }
 
-/* Overlay sutil para melhorar a legibilidade */
 .apresentacao::before,
 .projetos__lista::before,
 .artigos__lista::before {
@@ -1347,16 +1293,14 @@ body:has(.artigos__lista) {
   z-index: -1;
 }
 
-/* Ajuste para garantir que os cards e elementos fiquem legíveis */
 .projetos__item,
 .artigos__item {
-  background: rgba(10, 10, 15, 0.8); /* Fundo escuro semi-transparente */
+  background: rgba(10, 10, 15, 0.8);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo dos botões de redes sociais */
 .apresentacao__links__navegacao {
   display: flex;
   justify-content: center;
@@ -1372,18 +1316,18 @@ body:has(.artigos__lista) {
   color: var(--color-6);
   transition: all 0.3s ease;
   background: linear-gradient(to right, 
-      #1a1f3c 0%,    /* Azul escuro */
-      #2a2f4c 50%,   /* Azul médio */
-      #3a3f5c 100%   /* Azul mais claro */
+      #1a1f3c 0%,    
+      #2a2f4c 50%,  
+      #3a3f5c 100%  
   );
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .apresentacao__links__navegacao:hover {
   background: linear-gradient(to right,
-      #2a2f4c 0%,    /* Azul médio */
-      #3a3f5c 50%,   /* Azul mais claro */
-      #4a4f6c 100%   /* Azul brilhante */
+      #2a2f4c 0%,   
+      #3a3f5c 50%,  
+      #4a4f6c 100%  
   );
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
