@@ -1355,3 +1355,45 @@ body:has(.artigos__lista) {
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Estilo dos botões de redes sociais */
+.apresentacao__links__navegacao {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid var(--color-6);
+  width: 50%;
+  border-radius: 8px;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-6);
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, 
+      #1a1f3c 0%,    /* Azul escuro */
+      #2a2f4c 50%,   /* Azul médio */
+      #3a3f5c 100%   /* Azul mais claro */
+  );
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.apresentacao__links__navegacao:hover {
+  background: linear-gradient(to right,
+      #2a2f4c 0%,    /* Azul médio */
+      #3a3f5c 50%,   /* Azul mais claro */
+      #4a4f6c 100%   /* Azul brilhante */
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: #4a4f6c;
+}
+
+.apresentacao__links__navegacao img {
+  transition: transform 0.3s ease;
+}
+
+.apresentacao__links__navegacao:hover img {
+  transform: scale(1.1);
+}
