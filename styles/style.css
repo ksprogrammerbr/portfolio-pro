@@ -927,3 +927,297 @@ timeline-content h3 {
       transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  /* Ajustes do cabeçalho */
+  .cabecalho {
+      padding: 2% 5%;
+  }
+
+  .cabecalho__menu {
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  /* Ajustes da seção Sobre Mim */
+  .about-container {
+      padding: 2% 5%;
+  }
+
+  .about-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+      margin: 30px 0;
+  }
+
+  .about-hero__title {
+      font-size: 2.5rem;
+  }
+
+  .about-hero__subtitle {
+      font-size: 1.2rem;
+  }
+
+  .about-hero__image img {
+      max-width: 300px;
+  }
+
+  /* Ajustes dos cards */
+  .about-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 30px 0;
+      padding: 0 15px;
+  }
+
+  .about-card {
+      padding: 20px;
+  }
+
+  /* Ajustes da timeline */
+  .about-journey {
+      margin: 40px 0;
+      padding: 0 15px;
+  }
+
+  .about-journey h2 {
+      font-size: 2rem;
+  }
+
+  .timeline::before {
+      left: 30px;
+  }
+
+  .timeline-item {
+      margin-bottom: 30px;
+  }
+
+  .timeline-dot {
+      left: 30px;
+  }
+
+  .timeline-content {
+      width: calc(100% - 60px);
+      margin-left: 60px !important;
+      text-align: left !important;
+      padding: 15px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+      margin-right: 0;
+      margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes mais específicos para telas menores */
+  .cabecalho__menu__link {
+      font-size: 1rem;
+  }
+
+  .about-hero__title {
+      font-size: 2rem;
+  }
+
+  .about-hero__subtitle {
+      font-size: 1rem;
+  }
+
+  .about-hero__image img {
+      max-width: 250px;
+  }
+
+  .about-card {
+      padding: 15px;
+  }
+
+  .about-card__icon {
+      font-size: 2rem;
+  }
+
+  .about-card h3 {
+      font-size: 1.2rem;
+  }
+
+  .timeline-content h3 {
+      font-size: 1.3rem;
+  }
+
+  .timeline-content p {
+      font-size: 0.9rem;
+  }
+
+  /* Ajuste do rodapé */
+  .rodape {
+      padding: 15px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Ajustes para telas muito pequenas */
+  .about-hero__title {
+      font-size: 1.8rem;
+  }
+
+  .about-hero__subtitle {
+      font-size: 0.9rem;
+  }
+
+  .about-hero__image img {
+      max-width: 200px;
+  }
+
+  .timeline-content {
+      padding: 10px;
+  }
+}
+
+/* Media Queries Globais */
+@media (max-width: 768px) {
+  /* Ajustes do cabeçalho para todas as páginas */
+  .cabecalho {
+      padding: 2% 5%;
+  }
+
+  .cabecalho__menu {
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  /* Ajustes gerais de container */
+  .apresentacao,
+  .about-container,
+  .projetos,
+  .artigos {
+      padding: 2% 5%;
+  }
+
+  /* Ajustes de layout */
+  .apresentacao,
+  .about-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+      margin: 30px 0;
+  }
+
+  /* Ajustes de imagens */
+  .notebook-icon,
+  .about-hero__image img,
+  .project__item__img,
+  .artigos__img {
+      max-width: 300px;
+      margin: 0 auto;
+  }
+
+  /* Ajustes de grid */
+  .about-grid,
+  .projetos__lista,
+  .artigos__lista {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 30px 0;
+      padding: 0 15px;
+  }
+
+  /* Ajustes de cards */
+  .about-card,
+  .projetos__item,
+  .artigos__item {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes de fonte */
+  .cabecalho__menu__link {
+      font-size: 1rem;
+  }
+
+  .apresentacao__conteudo__titulo,
+  .about-hero__title,
+  .projetos__titulo,
+  .artigos__titulo {
+      font-size: 2rem;
+  }
+
+  .apresentacao__conteudo__texto,
+  .about-hero__subtitle {
+      font-size: 1rem;
+  }
+
+  /* Ajustes de imagens */
+  .notebook-icon,
+  .about-hero__image img,
+  .project__item__img,
+  .artigos__img {
+      max-width: 250px;
+  }
+
+  /* Ajustes de links */
+  .apresentacao__links__navegacao,
+  .projeto__links__navegacao {
+      width: 100%;
+      padding: 1rem;
+      font-size: 0.9rem;
+  }
+
+  /* Ajustes de cards */
+  .about-card,
+  .projetos__item,
+  .artigos__item {
+      padding: 15px;
+  }
+
+  /* Ajustes de ícones e títulos */
+  .about-card__icon {
+      font-size: 2rem;
+  }
+
+  .about-card h3,
+  .projetos__item h3,
+  .artigos__item h3 {
+      font-size: 1.2rem;
+  }
+
+  /* Ajuste do rodapé */
+  .rodape {
+      padding: 15px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Ajustes para telas muito pequenas */
+  .apresentacao__conteudo__titulo,
+  .about-hero__title,
+  .projetos__titulo,
+  .artigos__titulo {
+      font-size: 1.8rem;
+  }
+
+  .apresentacao__conteudo__texto,
+  .about-hero__subtitle {
+      font-size: 0.9rem;
+  }
+
+  /* Ajustes de imagens */
+  .notebook-icon,
+  .about-hero__image img,
+  .project__item__img,
+  .artigos__img {
+      max-width: 200px;
+  }
+
+  /* Ajustes de cards */
+  .about-card,
+  .projetos__item,
+  .artigos__item {
+      padding: 10px;
+  }
+}
