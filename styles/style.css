@@ -1221,3 +1221,34 @@ timeline-content h3 {
       padding: 10px;
   }
 }
+
+/* Adicione estas regras ao seu CSS existente */
+.projetos__item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.projetos__item:hover a {
+  color: var(--color-6);
+}
+
+/* Ocultar projetos extras */
+.projetos__item__oculto {
+  display: none;  /* Esconde completamente o elemento */
+}
+
+/* Mantenha as outras propriedades que já existem */
+.projetos__item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.projetos__item:hover a {
+  color: var(--color-6);
+}
