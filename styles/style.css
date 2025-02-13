@@ -401,10 +401,32 @@ body {
   font-size: 4rem;
   font-family: var(--fonte-primaria);
   margin-bottom: 20px;
-  color: var(--color-6);
-  opacity: 0; /* Inicialmente invisível */
-  animation: titleFade 1s ease-in forwards; /* Aplica a animação titleFade */
+  background: linear-gradient(45deg, var(--color-4) 0%, #ff3399 50%, var(--color-5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  opacity: 0;
+  animation: titleFade 1s ease-in forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
+
+.about-hero__title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--color-4) 0%, #ff3399 50%, var(--color-5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: blur(15px);
+  opacity: 0.5;
+}
+
 
 
 .about-hero__subtitle {
@@ -547,8 +569,13 @@ body {
 
 /* Animações */
 @keyframes titleFade {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-30px); background-position: 0% 50%;}
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+    background-position: 100% 50%;
+  }
+ 
 }
 
 @keyframes subtitleSlide {
