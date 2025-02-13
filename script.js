@@ -1,11 +1,6 @@
 const image = document.querySelector(".apresentacao__imagem");
 
-image.addEventListener("mousemove", (e) => {
-  const x = (e.offsetX / image.offsetWidth) * 20 - 10;
-  const y = (e.offsetY / image.offsetHeight) * 20 - 10;
-
-  image.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-});
+// Removido o mousemove e mouseleave para .apresentacao__imagem, pois o efeito 360º será aplicado em .notebook-icon
 
 document.addEventListener("mousemove", parallax);
 const body = document.querySelector("body");
@@ -23,48 +18,44 @@ function parallax(e) {
   body.style.backgroundPosition = x;
 }
 
-image.addEventListener("mouseleave", () => {
-  image.style.transform = "rotateX(0deg) rotateY(0deg)";
-});
+// Removido o mouseleave para .apresentacao__imagem
+
 const projectItems = document.querySelectorAll(".projetos__item");
 
 projectItems.forEach((item) => {
   item.addEventListener("mousemove", (e) => {
-    const x = (e.offsetX / item.offsetWidth) * 20 - 10;
-    const y = (e.offsetY / item.offsetHeight) * 20 - 10;
+    const x = (e.offsetX / item.offsetWidth) * 10 - 5;
+    const y = (e.offsetY / item.offsetHeight) * 10 - 5;
 
+    item.style.transition = 'transform 0.3s ease'; // Adicionado transição suave
     item.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
   });
 
   item.addEventListener("mouseleave", () => {
+    item.style.transition = 'transform 0.5s ease'; // Transição mais lenta ao voltar
     item.style.transform = "rotateX(0deg) rotateY(0deg)";
   });
 });
 
 const componentImage = document.querySelector(".notebook-icon img");
 
-componentImage.addEventListener("mousemove", (e) => {
-  const x = (e.offsetX / componentImage.offsetWidth) * 20 - 10;
-  const y = (e.offsetY / componentImage.offsetHeight) * 20 - 10;
+// Removido o mousemove para .notebook-icon img, pois o efeito 360º será controlado pelo hover no CSS
 
-  componentImage.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-});
-
-componentImage.addEventListener("mouseleave", () => {
-  componentImage.style.transform = "rotateX(0deg) rotateY(0deg)";
-});
+// Removido o mouseleave para .notebook-icon img
 
 const articleItems = document.querySelectorAll(".artigos__item");
 
 articleItems.forEach((item) => {
   item.addEventListener("mousemove", (e) => {
-    const x = (e.offsetX / item.offsetWidth) * 20 - 10;
-    const y = (e.offsetY / item.offsetHeight) * 20 - 10;
+    const x = (e.offsetX / item.offsetWidth) * 10 - 5; // Reduzido de 20 para 10
+    const y = (e.offsetY / item.offsetHeight) * 10 - 5; // Reduzido de 20 para 10
 
+    item.style.transition = 'transform 0.3s ease'; // Adicionado transição suave
     item.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
   });
 
   item.addEventListener("mouseleave", () => {
+    item.style.transition = 'transform 0.5s ease'; // Transição mais lenta ao voltar
     item.style.transform = "rotateX(0deg) rotateY(0deg)";
   });
 });
