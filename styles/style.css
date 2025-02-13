@@ -1252,3 +1252,106 @@ timeline-content h3 {
 .projetos__item:hover a {
   color: var(--color-6);
 }
+
+/* Tela HOME */
+
+body:not(.about-page) .apresentacao {
+  background: linear-gradient(135deg, 
+      #000000 0%,    /* Preto puro */
+      #0a0a0a 25%,   /* Quase preto */
+      #121212 50%,   /* Dark suave */
+      #1a1a1a 75%,   /* Dark médio */
+      #3C3D37 100%   /* Dark mais claro */
+  );
+  position: relative;
+  z-index: 1;
+}
+
+/* Efeito no cabeçalho */
+.cabecalho {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.cabecalho:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Efeito nos links do menu */
+.cabecalho__menu__link {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.cabecalho__menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-4), var(--color-5));
+  transition: width 0.3s ease;
+}
+
+.cabecalho__menu__link:hover::after {
+  width: 100%;
+}
+
+.cabecalho__menu__link:hover {
+  text-shadow: 0 0 8px rgba(248, 5, 114, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Fundo para a página de Projetos - tons de roxo escuro */
+.project-page {
+  background: linear-gradient(145deg,
+      #0a0612 0%,    /* Roxo muito escuro */
+      #130b24 35%,   /* Roxo escuro */
+      #1d1132 70%,   /* Roxo médio escuro */
+      #261640 100%   /* Roxo profundo */
+  );
+}
+
+/* Fundo para a página de Links Úteis - tons de azul escuro */
+body:has(.artigos__lista) {
+  background: linear-gradient(160deg,
+      #0a0d14 0%,    /* Azul muito escuro */
+      #111827 30%,   /* Azul escuro */
+      #1a2333 60%,   /* Azul médio escuro */
+      #1e293b 90%,   /* Azul profundo */
+      #252f43 100%   /* Azul noturno */
+  );
+}
+
+/* Overlay sutil para melhorar a legibilidade */
+.apresentacao::before,
+.projetos__lista::before,
+.artigos__lista::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Ajuste para garantir que os cards e elementos fiquem legíveis */
+.projetos__item,
+.artigos__item {
+  background: rgba(10, 10, 15, 0.8); /* Fundo escuro semi-transparente */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
