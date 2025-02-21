@@ -451,18 +451,72 @@ body {
 }
 
 .neon-link {
+    padding: 0.6rem 1.8rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
     color: var(--accent-color);
     text-decoration: none;
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .neon-link:hover {
     background: rgba(100, 255, 218, 0.1);
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+.neon-link::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(100, 255, 218, 0.1),
+        rgba(100, 255, 218, 0.3),
+        rgba(100, 255, 218, 0.1),
+        transparent
+    );
+    transform: rotate(35deg);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.neon-link:hover::before {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.projeto-card__tech {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.projeto-card__tech span {
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 /* Contact Section */
