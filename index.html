@@ -1,53 +1,229 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfolio - Karina Santos</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-
 <body>
+    <div id="particles-js"></div>
+    
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre Mim</a>
-            <a class="cabecalho__menu__link" href="project.html">Projetos</a>
-            <a class="cabecalho__menu__link" href="artigos.html">Links úteis</a>
+        <nav class="cabecalho__nav">
+            <ul class="cabecalho__menu">
+                <li><a class="cabecalho__menu__link" href="#home">Home</a></li>
+                <li><a class="cabecalho__menu__link" href="#sobre">Sobre</a></li>
+                <li><a class="cabecalho__menu__link" href="#jornada">Jornada</a></li>
+                <li><a class="cabecalho__menu__link" href="#habilidades">Habilidades</a></li>
+                <li><a class="cabecalho__menu__link" href="#projetos">Projetos</a></li>
+                <li><a class="cabecalho__menu__link" href="#contato">Contato</a></li>
+                <li><a class="cabecalho__menu__link" href="#curriculo">Currículo</a></li>
+            </ul>
         </nav>
     </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong
-                    class="titulo-destaque">com um Front-end de
-                    qualidade!</strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! Sou Karina Silva, desenvolvedora Full-Stack, com formação em Análise e Desenvolvimento de Sistemas e especialização em 
-                JavaScript e frameworks modernos para Front-End e Back-End. Ajudo pequenos negócios e designers a transformarem boas ideias em soluções digitais eficientes. 
-                Vamos conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes: </h2>
-                <a class="apresentacao__links__navegacao" href="https://github.com/ksprogrammerbr">
-                    <img src="./assets/github.png">
-                    GitHub
+
+    <main>
+        <section id="home" class="apresentacao">
+            <div class="background-animation">
+                <div class="gradient-sphere"></div>
+                <div class="particles"></div>
+            </div>
+            <div class="apresentacao__conteudo glass-effect">
+                <h1 class="apresentacao__conteudo__titulo">
+                    Eleve seu negócio digital a outro nível<br>
+                    com um <span class="typing-text"></span>
+                </h1>
+                <p class="apresentacao__conteudo__texto">
+                    Ajudo empresas a construírem presenças digitais modernas e impactantes
+                </p>
+                <div class="apresentacao__links">
+                    <a class="apresentacao__links__link glass-btn" href="https://github.com/ksprogrammerbr" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a class="apresentacao__links__link glass-btn" href="https://linkedin.com/in/ksprogrammerbr" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre__container glass-effect">
+                <div class="sobre__foto">
+                    <div class="foto-container glass-effect">
+                        <img src="assets/Imagem.png" alt="Karina Santos" class="profile-img">
+                    </div>
+                </div>
+                <div class="sobre__content">
+                    <p class="sobre__texto">Sou uma desenvolvedora Full-Stack apaixonada por criar soluções inovadoras e experiências digitais únicas. Com formação em Análise e Desenvolvimento de Sistemas, especializo-me em JavaScript e frameworks modernos.</p>
+                    <p>Minha jornada no desenvolvimento começou em 2022, e desde então venho me aperfeiçoando constantemente em novas tecnologias e metodologias ágeis.</p>
+                    <div class="sobre__stats">
+                        <div class="stat">
+                            <span class="stat__number">3+</span>
+                            <span class="stat__label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">50+</span>
+                            <span class="stat__label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">30+</span>
+                            <span class="stat__label">Clientes Satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="jornada">
+            <h2 class="section-title">Minha Jornada</h2>
+            <div class="timeline">
+                <div class="timeline__item" data-aos="fade-up">
+                    <div class="timeline__content">
+                        <span class="timeline__date">2025</span>
+                        <h3>Back-End + IA</h3>
+                        <p>Especialização em Java Spring e Google Data Analytics</p>
+                    </div>
+                </div>
+                <div class="timeline__item" data-aos="fade-up">
+                    <div class="timeline__content">
+                        <span class="timeline__date">2024</span>
+                        <h3>UI/UX Design</h3>
+                        <p>Especialização em Design Web UI/UX</p>
+                    </div>
+                </div>
+                <div class="timeline__item" data-aos="fade-up">
+                    <div class="timeline__content">
+                        <span class="timeline__date">2023</span>
+                        <h3>JavaScript</h3>
+                        <p>Especialização em JavaScript e Frameworks modernos</p>
+                    </div>
+                </div>
+                <div class="timeline__item" data-aos="fade-up">
+                    <div class="timeline__content">
+                        <span class="timeline__date">2022</span>
+                        <h3>Início</h3>
+                        <p>Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="habilidades">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-bubble" data-skill="HTML5">HTML5</div>
+                <div class="skill-bubble" data-skill="CSS3">CSS3</div>
+                <div class="skill-bubble" data-skill="JavaScript">JavaScript</div>
+                <div class="skill-bubble" data-skill="React">React</div>
+                <div class="skill-bubble" data-skill="Node.js">Node.js</div>
+                <div class="skill-bubble" data-skill="Java">Java</div>
+                <div class="skill-bubble" data-skill="Spring">Spring</div>
+                <div class="skill-bubble" data-skill="SQL">SQL</div>
+                <div class="skill-bubble" data-skill="Git">Git</div>
+                <div class="skill-bubble" data-skill="Figma">Figma</div>
+                <div class="skill-bubble" data-skill="UI/UX">UI/UX</div>
+                <div class="skill-bubble" data-skill="Agile">Agile</div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2 class="section-title">Projetos</h2>
+            <div class="projetos__container">
+                <div class="projeto-card glass-effect">
+                    <img src="assets/projeto1.png" alt="Sorteio Amigo Secreto" class="projeto-card__img">
+                    <div class="projeto-card__content">
+                        <h3>Sorteio Amigo Secreto</h3>
+                        <p>Aplicativo web para realizar sorteios de Amigo Secreto de forma moderna e segura</p>
+                        <div class="projeto-card__tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="projeto-card__links">
+                            <a href="https://sorteio-amigo-secreto-khaki.vercel.app/" target="_blank" class="neon-link">Demo</a>
+                            <a href="https://github.com/ksprogrammerbr/sorteio-amigo-secreto" target="_blank" class="neon-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card glass-effect">
+                    <img src="assets/projeto2.png" alt="Fala para Texto" class="projeto-card__img">
+                    <div class="projeto-card__content">
+                        <h3>Fala para Texto</h3>
+                        <p>Aplicação web para converter fala em texto com interface intuitiva</p>
+                        <div class="projeto-card__tech">
+                            <span>JavaScript</span>
+                            <span>Web Speech API</span>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="projeto-card__links">
+                            <a href="https://fala-para-texto.vercel.app/" target="_blank" class="neon-link">Demo</a>
+                            <a href="https://github.com/ksprogrammerbr/fala-para-texto" target="_blank" class="neon-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card glass-effect">
+                    <img src="assets/projeto3.png" alt="Jogo Número Secreto" class="projeto-card__img">
+                    <div class="projeto-card__content">
+                        <h3>Jogo Número Secreto</h3>
+                        <p>Jogo interativo de adivinhação com reconhecimento de voz</p>
+                        <div class="projeto-card__tech">
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>Web Speech API</span>
+                        </div>
+                        <div class="projeto-card__links">
+                            <a href="https://jogo-flax-eight-64.vercel.app/" target="_blank" class="neon-link">Demo</a>
+                            <a href="https://github.com/ksprogrammerbr/jogo-numero-secreto" target="_blank" class="neon-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculo" class="curriculo">
+            <div class="curriculo__container glass-effect">
+                <div class="curriculo__content">
+                    <p>Baixe meu currículo completo para conhecer mais sobre minha trajetória profissional.</p>
+                    <a href="assets/curriculo.pdf" download class="download-btn glass-effect">
+                        <i class="fas fa-download"></i>
+                        Baixar Currículo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2 class="section-title">Contato</h2>
+            <div class="contato__links">
+                <a class="contato__links__link" href="https://github.com/ksprogrammerbr" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
                 </a>
-                <a class="apresentacao__links__navegacao"
-                    href="https://www.linkedin.com/in/karina-araujo-financeiro-tecnologia/">
-                    <img src="./assets/linkedin.png">
-                    Linkedin
+                <a class="contato__links__link" href="https://linkedin.com/in/ksprogrammerbr" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a class="contato__links__link" href="mailto:contato@karinasantos.dev">
+                    <i class="fas fa-envelope"></i> Email
                 </a>
             </div>
         </section>
-        <div class="notebook-icon">
-            <img src="./assets/component.png" alt="3D Notebook Icon">
-        </div>
     </main>
-    <footer class="rodape">
-        <div>
-            <p>Desenvolvido por Karina Silva</p>
-        </div>
-    </footer>
-    <script src="./script.js"></script>
-</body>
 
+    <footer class="rodape">
+        <p>Desenvolvido por Karina Santos</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
 </html>
