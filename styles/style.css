@@ -1140,7 +1140,7 @@ body {
 .timeline-content {
     padding: 20px;
     background: rgba(17, 25, 40, 0.75);
-    border-radius: 6px;
+    border-radius: 12px;
     border: 1px solid rgba(100, 255, 218, 0.1);
     position: relative;
     overflow: hidden;
@@ -1153,38 +1153,44 @@ body {
     border-color: var(--accent-color);
 }
 
-.timeline-content::before {
+.timeline-content::after {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 50%;
+    left: -150%;
+    width: 150%;
     height: 100%;
     background: linear-gradient(
-        to right,
+        90deg,
         transparent,
-        rgba(100, 255, 218, 0.2),
+        rgba(100, 255, 218, 0.05),
+        var(--accent-color),
+        rgba(100, 255, 218, 0.05),
         transparent
     );
-    transform: skewX(-25deg);
-    transition: all 0.75s ease;
+    transform: rotate(35deg);
+    transition: 0.5s;
+    z-index: 1;
 }
 
-.timeline-content:hover::before {
+.timeline-content:hover::after {
     left: 150%;
-    transition: 0.75s ease-in-out;
 }
 
 .timeline-content h3 {
     color: var(--accent-color);
     margin-bottom: 10px;
     font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .timeline-content p {
     color: var(--text-secondary);
     line-height: 1.6;
     font-size: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Skills Bubbles */
